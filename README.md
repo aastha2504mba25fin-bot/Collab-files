@@ -1,99 +1,60 @@
-# Nanonets Invoice Data Extraction Labs
+# AI Ethics & Explainability Colab Labs
 
-This repository contains a series of Google Colab notebooks demonstrating hands-on invoice data extraction using Nanonets no-code AI platform. These labs teach converting unstructured PDFs into structured financial data for finance automation. [nanonets](https://nanonets.com)
+This repository contains Google Colab notebooks for practical AI Responsible AI (RAI) labs. Topics cover bias detection, fairness metrics, explainability (SHAP/LIME), ethical risks, and transparency auditing using Python libraries. [arxiv](https://arxiv.org/html/2412.17052v1)
 
-## Overview
+## Labs Overview
 
-The notebooks guide users through AI-powered Intelligent Document Processing (IDP) for invoices, covering upload, extraction, validation, and export to Excel/CSV. They mirror real-world accounts payable automation, reducing manual entry from hours to minutes. [github](https://github.com/robocorp/example-idp-nanonets-ui)
+Progressive hands-on sessions implement ML fairness and interpretability techniques. Run in Colab—no setup needed.
 
-## Objective
+| Lab | Topic | Colab Link |
+|-----|-------|------------|
+| 1-2 | Bias Detection | [Open](https://colab.research.google.com/drive/1gFF0PAzchlReG1wrKWNEfLZ6SowKS-NR?usp=sharing) |
+| 2-3 | Fairness Metrics | [Open](https://colab.research.google.com/drive/1asGcuQ15TG8Y6mjYMN3ys1SouBSWVYlX?usp=sharing) |
+| 3-4 | SHAP/LIME Explainers | [Open](https://colab.research.google.com/drive/1MI56bD_qze2F7l50GhTzD1gqm-XBO377?usp=sharing) |
+| 5-6 | Ethical Risk Assessment | [Open](https://colab.research.google.com/drive/1YBpydRoBBv7zmXCq2GVokNOz5doVqq2W?usp=sharing) |
+| 7-8 | Transparency Auditing | [Open](https://colab.research.google.com/drive/1h86HyZIbF3Bd6dXGX6UKdTw4aFoVfC9t?usp=sharing) |
+| Intro | Setup & Datasets | [Open](https://colab.research.google.com/drive/1KNLv9Pc2PQg18d2Q-H6pzMiewiGr5AcY?usp=sharing) |
+| Data Prep | Preprocessing | [Open](https://colab.research.google.com/drive/1vrxjtl7iC9glzYIDrII12asscDA5e3yy?usp=sharing) |
+| Modeling | Train Models | [Open](https://colab.research.google.com/drive/1RghWaT7eGiw07PUJfgglRdRXvs4m30G1?usp=sharing) |
+| Advanced | Integration | [Open](https://colab.research.google.com/drive/1QkKWxxGUl_0xzXs8sXJ6iWlaQCUpVbQv?usp=sharing) |  [github](https://github.com/cloudera/CML_AMP_Explainability_LIME_SHAP)
 
-- Extract key fields (invoice number, date, vendor, total, line items) from PDF invoices automatically.
-- Understand OCR + AI for unstructured to structured data conversion.
-- Apply to finance: AP automation, audits, ERP integration.
-- No coding required—pure Nanonets platform usage. [nanonets](https://nanonets.com)
+## Quick Start
 
-## Problem Statement
+1. Open a notebook → Connect to runtime.
+2. Install libs (pre-included): `!pip install fairlearn shap lime aif360`.
+3. Load sample datasets (Adult UCI, COMPAS).
+4. Run cells sequentially for metrics/plots. [studocu](https://www.studocu.com/row/document/pokhara-university/machine-learning/supervised-fairness-metrics-guide-key-metrics-formulas/127458267)
 
-Manual invoice processing causes delays, errors (5-10% typical), and high costs (₹50k+/month for 1000 invoices). PDFs can't feed directly into Excel/ERP. AI solves this with 95%+ accuracy post-training. [nanonets](https://nanonets.com/ap-automation)
+## Key Techniques
 
-## Lab Notebooks
+**Bias Detection (Labs 1-2)**: Identify disparities using statistical tests on protected attributes (gender, race). [arxiv](https://arxiv.org/html/2412.17052v1)
 
-| Notebook ID | Focus Area | Link |
-|-------------|------------|------|
-| 1 | Nanonets Basics & Setup | [Colab 1](https://colab.research.google.com/drive/1KNLv9Pc2PQg18d2Q-H6pzMiewiGr5AcY?usp=sharing) |
-| 2 | Invoice Upload & OCR | [Colab 2](https://colab.research.google.com/drive/1vrxjtl7iC9glzYIDrII12asscDA5e3yy?usp=sharing) |
-| 3 | Field Extraction Demo | [Colab 3](https://colab.research.google.com/drive/1RghWaT7eGiw07PUJfgglRdRXvs4m30G1?usp=sharing) |
-| 4 | Table & Line Items | [Colab 4](https://colab.research.google.com/drive/1QkKWxxGUl_0xzXs8sXJ6iWlaQCUpVbQv?usp=sharing) |
-| 5 | Validation & Corrections | [Colab 5](https://colab.research.google.com/drive/1gFF0PAzchlReG1wrKWNEfLZ6SowKS-NR?usp=sharing) |
-| 6 | Export to Excel/CSV | [Colab 6](https://colab.research.google.com/drive/1asGcuQ15TG8Y6mjYMN3ys1SouBSWVYlX?usp=sharing) |
-| 7 | Q&A on Extracted Data | [Colab 7](https://colab.research.google.com/drive/1MI56bD_qze2F7l50GhTzD1gqm-XBO377?usp=sharing) |
-| 8 | Batch Processing | [Colab 8](https://colab.research.google.com/drive/1YBpydRoBBv7zmXCq2GVokNOz5doVqq2W?usp=sharing) |
-| 9 | Finance Analytics | [Colab 9](https://colab.research.google.com/drive/1h86HyZIbF3Bd6dXGX6UKdTw4aFoVfC9t?usp=sharing) |  [youtube](https://www.youtube.com/watch?v=Kc5aCNIuD-Q)
+**Fairness Metrics (Labs 2-3)**:
+- Statistical Parity Difference (SPD): P(ŷ=1|unprivileged) - P(ŷ=1|privileged).
+- Equalized Odds: Equal TPR/FPR across groups.
+- Aim: Values near 0 indicate fairness. [github](https://github.com/Repoanonymous/Fairness_Metrics)
 
-## Architecture
+**SHAP/LIME (Labs 3-4)**: Local/global explanations.
+- SHAP: Feature contributions via Shapley values.
+- LIME: Linear approximations around predictions. [github](https://github.com/cloudera/CML_AMP_Explainability_LIME_SHAP)
 
-```
-Invoice PDF/Image → Nanonets Platform → OCR + AI Extraction → Structured Data (JSON/Excel) → Analysis/ERP
-```
+**Ethical Risks (Labs 5-6)**: Assess privacy leaks, robustness to adversarial attacks, societal impacts. [carpentries-incubator.github](https://carpentries-incubator.github.io/fair-explainable-ml/3-model-eval-and-fairness.html)
 
-- **OCR**: Text detection (Tesseract-like).
-- **AI**: LayoutLM/BERT for fields/tables.
-- **Validation**: Confidence scores, manual review.
-- **Output**: Export-ready datasets. [docstrange.nanonets](https://docstrange.nanonets.com/docs/examples)
+**Auditing (Labs 7-8)**: Model cards, counterfactuals, transparency reports. [carpentries-incubator.github](https://carpentries-incubator.github.io/fair-explainable-ml/3-model-eval-and-fairness.html)
 
-## Tools & Technologies
+## Libraries Used
 
-- **Nanonets**: Core no-code IDP platform. [nanonets](https://nanonets.com)
-- **Google Colab**: Free runtime for demos (no local setup).
-- **Sample Invoices**: Hypothetical finance docs with GST/TDS.
-- **Exports**: CSV/Excel for Power BI/Tableau. [n8n](https://n8n.io/workflows/6194-parse-and-extract-invoice-data-with-nanonets-ocr-and-export-to-excel/)
+- Fairlearn/AIF360: Fairness metrics.
+- SHAP/LIME: Interpretability.
+- Scikit-learn/XGBoost: Models.
+- Pandas/Matplotlib/Seaborn: Viz. [github](https://github.com/cloudera/CML_AMP_Explainability_LIME_SHAP)
 
-## Key Features
+## Example Outputs
 
-- Auto-detects invoice number, dates, vendor, totals, line items.
-- Handles tables (Qty, Price, Amount).
-- Tax validation (GST 18%, TDS 10%).
-- Q&A interface for analytics (e.g., "Highest revenue item?").
-- Improves with feedback/training. [zephyrnet](https://zephyrnet.com/improve-invoice-processing-accuracy-with-nanonets-and-chatgpt/)
+- Bias plot: Darker bars show higher error rates for minorities.
+- SHAP summary: Top features pushing predictions.
+- Fairness report: "SPD = 0.12 → Moderate bias." [aericho](https://aericho.com/explaining-explainable-ml/)
 
-## Setup Instructions
+## Business Relevance
 
-1. Open any notebook link (requires Google account).
-2. Sign into [nanonets.com](https://nanonets.com/) via Google.
-3. Follow cell-by-cell: Upload sample PDF → Extract → Export.
-4. Use provided hypothetical invoice for testing. [nanonets](https://nanonets.com)
-
-## Sample Invoice Analysis
-
-**Hypothetical Example** (Used in labs):
-- Vendor: Global Finance Consulting
-- Total: ₹70,800 (Subtotal ₹60,000 + GST ₹10,800)
-- Services: Financial Modeling (₹20k), Risk Analysis (₹25k), etc.
-
-**Questions Covered**:
-- Total value? ₹70,800
-- GST rate? 18%
-- Highest service? Risk Analysis (35% of subtotal). [vskumar](https://vskumar.blog/2025/06/26/9-workflows-%F0%9F%93%84-from-paper-to-productive-automating-document-workflows-with-nanonets-and-ai/)
-
-## Business Value
-
-| Manual | AI with Nanonets |
-|--------|------------------|
-| 5-10 min/invoice | <30 sec/invoice |
-| 5% error rate | <1% with validation |
-| ₹20-50/hr labor | Near-zero marginal |
-| Slow audits | Real-time compliance |  [nanonets](https://nanonets.com/ap-automation)
-
-**Use Cases**: AP automation, fraud detection, ERP feeds (SAP), SME finance. [robocorp](https://robocorp.com/portal/robot/robocorp/example-idp-nanonets-ui)
-
-## Future Enhancements
-
-- API integration for production.
-- Multi-language/currency.
-- Workflow automation (n8n/Zapier).
-- Custom model training. [n8n](https://n8n.io/workflows/6194-parse-and-extract-invoice-data-with-nanonets-ocr-and-export-to-excel/)
-
-## Conclusion
-
-These labs showcase Nanonets transforming finance docs into actionable data, enabling digital transformation without code. Run them in Colab for instant results! [github](https://github.com/robocorp/example-idp-nanonets-ui)
+Essential for regulated ML (finance, hiring, healthcare). Reduces legal risks, builds trust. EU AI Act compliance via audits. [carpentries-incubator.github](https://carpentries-incubator.github.io/fair-explainable-ml/3-model-eval-and-fairness.html)
